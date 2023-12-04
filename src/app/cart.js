@@ -38,7 +38,7 @@ export const cartQuantityUpdate = (id,quantity) => {
     const currentCartPrice = currentCart.querySelector(".cart-price");
     const currentCartCost = currentCart.querySelector(".cart-cost");
   
-    if (quantity > 0 || currentRowQ.innerText > 1) {
+    if (quantity > 0 || currentCartQ.innerText > 1) {
       currentCartQ.innerText = parseInt(currentCartQ.innerText) + quantity;
       currentCartCost.innerText =
         currentCartQ.innerText * currentCartPrice.innerText;
@@ -56,6 +56,9 @@ cartRemove(event.target.closest(".product-in-cart").getAttribute("product-in-car
 
     }
     else if(event.target.classList.contains("cart-q-sub")){
+       
+        cartQuantityUpdate(event.target.closest(".product-in-cart").getAttribute("product-in-cart-id"),-1);
+
 
     }
     
