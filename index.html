@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en" >
 
 <head>
   <meta charset="UTF-8" />
+  
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop App</title>
@@ -18,15 +19,15 @@
         <div class="flex justify-between items-center">
 
           <div class="">
-            <h1 class="font-heading font-bold text-3xl">MMS Solution</h1>
-            <p class="text-gray-500">E-commerce App</p>
+            <h1 class="font-heading font-bold text-xl md:text-3xl">MMS Solution</h1>
+            <p class="text-gray-500 text-xs md:text-base">E-commerce App</p>
           </div>
 
           <div class="flex gap-2">
 
             <!-- text box  -->
             <input type="text" id="searchInput" placeholder="search product"
-              class=" opacity-0 pointer-events-none  rounded-lg border-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300">
+              class=" opacity-0 fixed w-4/5 mx-auto top-16 left-0 right-0 sm:static pointer-events-none  rounded-lg border-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300">
 
             <!-- //outline -->
             <button type="button" id="searchBtn"
@@ -64,7 +65,7 @@
     </header>
 
     <!-- extra space  -->
-    <div class="h-24"></div>
+    <div id="top" class="h-24"></div>
 
     <!-- category -->
     <section class="mt-5 mb-10">
@@ -96,7 +97,7 @@
             Copyright @ 2023 <a href="https://mms-it.com" target="_blank">MMS IT</a>
           </p>
 
-          <button type="button"
+          <a href="#top"
             class="text-white border border-white hover:bg-white hover:text-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6">
@@ -104,7 +105,7 @@
             </svg>
 
             <span class="sr-only">Scroll to top</span>
-          </button>
+          </a>
 
 
         </div>
@@ -167,7 +168,7 @@
     <!-- categoryTemplate  -->
     <template id="categoryTemplate">
 
-      <button type="button" class="cat-btn  ">All</button>
+      <button type="button" class="cat-btn whitespace-nowrap ">All</button>
 
 
     </template>
@@ -243,7 +244,7 @@
     <template id="cartTemplate">
       <div class="product-in-cart">
         <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" class="h-20 -mb-10 ml-5 cart-img relative z-10">
-        <div class="group border rounded-lg border-gray-300 p-5 relative overflow-hidden">
+        <div class="group border rounded-lg bg-white border-gray-300 p-5 relative overflow-hidden">
 
           <button class="cart-del bg-red-200 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto translate-x-14 group-hover:translate-x-0 duration-200 text-red-700 rounded-lg absolute top-3 right-5">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

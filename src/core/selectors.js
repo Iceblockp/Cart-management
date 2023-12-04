@@ -11,3 +11,4 @@ export const cartGroup = app.querySelector("#cartGroup");
 export const cartTemplate = app.querySelector("#cartTemplate");
 export const costTotal = app.querySelector("#costTotal");
 export const orderBtn = app.querySelector("#orderBtn");
+export const cartBtn = app.querySelector("#cartBtn");

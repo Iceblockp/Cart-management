@@ -18,9 +18,12 @@ export const cartRemove = (id) => {
     const currentCart = cartGroup.querySelector(`[product-in-cart-id='${id}']`)
     const currentProductCard = productGroup.querySelector(`[product-card-id='${id}']`)
     confirmBox(() => {
+        currentCart.classList.add("animate__animated","animate__hinge");
+       currentCart.addEventListener("animationend",() => {
         currentCart.remove();
         currentProductCard.querySelector(".add-to-cart-btn").toggleAttribute("disabled");
 
+       })
        
         
     },)
